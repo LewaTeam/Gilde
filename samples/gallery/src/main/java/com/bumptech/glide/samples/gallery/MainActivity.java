@@ -14,6 +14,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        //设置内存的种类
         Glide.get(this).setMemoryCategory(MemoryCategory.HIGH);
     }
 }
