@@ -125,7 +125,7 @@ public class RequestManagerRetriever implements Handler.Callback {
       throw new IllegalArgumentException(
           "You cannot start a load on a fragment before it is attached");
     }
-    if (Util.isOnBackgroundThread()) {
+    if (Util.isOnBackgroundThread()) { //@Linus-Smith 判断当前的线程是否为后台线程，如果是后台线程则返回true,反之返回false
       return get(fragment.getActivity().getApplicationContext());
     } else {
       FragmentManager fm = fragment.getChildFragmentManager();
